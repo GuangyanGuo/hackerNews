@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+
+<script  type="text/javascript" src="hackerNews.js" ></script>
+<style>
+    #comment {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        background-color: #eee;
+        margin: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        display: none;
+       
+    }
+
+    .comment-row {
+        overflow: auto;
+    }
+    #close {
+        left: calc(100% - 30px);
+        top: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        width: 20px;
+		height: 20px;
+		background-color: #333;
+		border-radius: 50%;
+    }
+	#close span {
+		left: 6px;
+		position: relative;
+        color: #fff;
+	}
+
+
+</style>
+</head>
+<body>
+  <h1>Hacker News Top Stories</h1>
+  <div id="comment" >
+    <div id="close" onclick="closeComment()"><span>x</span></div>
+	<div class="comment-row">
+        <div>by: </div> <div id="by"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>id: </div> <div id="id"></div><br />
+    </div>
+    
+    
+    <div class="comment-row">
+        <div>descendants: </div> <div id="descendants"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>kids: </div> <div id="kids"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>score: </div> <div id="score"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>time: </div> <div id="time"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>title: </div> <div id="title"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>type: </div> <div id="type"></div><br />
+    </div>
+
+    <div class="comment-row">
+        <div>url: </div> <div id="url"></div><br />
+    </div>
+    
+  </div>
+  
+  <div id="stories" ></div>
+</body>
+</html>
